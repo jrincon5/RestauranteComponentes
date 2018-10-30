@@ -1,15 +1,15 @@
 package co.com.eafit.entidad;
 
-/*import javax.persistence.Column;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.Table;*/
-//@Entity
-//@Table(name="restaurante")
+import javax.persistence.Table;
+@Entity
+@Table(name="restaurante")
 public class RestauranteEntity {
 
-	/*@Id
+	@Id
 	@GeneratedValue
 	@Column(name = "id_restaurante")
 	private int idRestaurante;
@@ -61,5 +61,5 @@ public class RestauranteEntity {
 	}
 	public void setDireccion(String direccion) {
 		this.direccion = direccion;
-	}*/	
+	}	
 }
