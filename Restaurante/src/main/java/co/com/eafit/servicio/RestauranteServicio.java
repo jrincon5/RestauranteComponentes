@@ -22,6 +22,7 @@ public class RestauranteServicio implements IRestauranteServicio {
 	@Override
 	public void agregarRestaurante(RestauranteDTO restauranteDTO) {
 		//restauranteMapper.dtoRestauranteAEntity(restauranteDTO);
+		//restauranteRepository.count();
 		restauranteRepository.save(restauranteMapper.dtoRestauranteAEntity(restauranteDTO));
 
 	}

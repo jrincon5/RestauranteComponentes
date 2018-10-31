@@ -10,13 +10,13 @@ public class RestauranteMapper implements IRestauranteMapper {
 
 	@Override
 	public RestauranteEntity dtoRestauranteAEntity(RestauranteDTO restauranteDTO) {
-		/*RestauranteEntity restauranteEntity = new RestauranteEntity();
+		RestauranteEntity restauranteEntity = new RestauranteEntity();
 		restauranteEntity.setNombre(restauranteDTO.getNombre());
-		restauranteEntity.setDescripcion(restauranteDTO.getNombre());
+		restauranteEntity.setDescripcion(restauranteDTO.getDescripcion());
 		restauranteEntity.setDireccion(restauranteDTO.getDireccion());
 		restauranteEntity.setTelefono(restauranteDTO.getTelefono());
-		restauranteEntity.setTipoRestaurante(restauranteDTO.getTipoRestaurante());*/
-		return null;
+		restauranteEntity.setTipoRestaurante(restauranteDTO.getTipoRestaurante());
+		return restauranteEntity;
 	}
 
 }
