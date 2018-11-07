@@ -33,13 +33,21 @@ public class FacturaMapper implements IFacturaMapper{
 	}
 	
 	private List<ProductoDTO> extraerProductosString(String stringProductos){
-		String[] productos=stringProductos.split("|");
+		
 		List<ProductoDTO> listProductos = new ArrayList<>();
-		for(String producto : productos) {
-			String a = "";//String[] productoPrecio = producto.split("-");
-			
-			//listProductos.add(new ProductoDTO(productoPrecio[0], Double.parseDouble(productoPrecio[1]), "", ""));
+		try {
+			String[] productos = stringProductos.split("\\|");
+			for(String producto : productos) {
+				try {
+					String[] productoSplit = producto.split("-");
+					listProductos.add(new ProductoDTO(productoSplit[0], Double.parseDouble(productoSplit[1]), "", ""));
+				}catch(Exception e) {
+				
+				}
+			}
+		}catch(Exception e) {
 		}
+		
 		return listProductos;
 	}
 	

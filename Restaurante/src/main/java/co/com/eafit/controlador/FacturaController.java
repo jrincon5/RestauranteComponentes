@@ -1,5 +1,7 @@
 package co.com.eafit.controlador;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -24,8 +26,13 @@ public class FacturaController {
 		facturaServicio.agregarFactura(facturaDTO);
 	}
 	
-	@GetMapping("/listarfactura")
+	@PostMapping("/listarfactura")
 	public FacturaDTO listarFactura(@RequestBody String referenciaPago) {
 		return facturaServicio.listarFactura(referenciaPago);
+	}
+	
+	@GetMapping("/listarfacturaTotal")
+	public List<FacturaDTO> listarFactura() {
+		return facturaServicio.listarFacturaTotal();
 	}
 }
